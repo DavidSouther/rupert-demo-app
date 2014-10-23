@@ -1,0 +1,30 @@
+{
+  "name": "rupert-demo-app",
+  "version": "0.0.0",
+  "description": "A Rupert Demonstration.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "./node_modules/.bin/grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidSouther/rupert-demo-app.git"
+  },
+  "author": "David Souther <davidsouther@gmail.com> (https://davidsouther.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidSouther/rupert-demo-app/issues"
+  },
+  "homepage": "https://github.com/DavidSouther/rupert-demo-app",
+  "dependencies": {
+    "rupert": "^0.2.0",
+    "rupert-config-angular": "0.0.1",
+    "rupert-config-bootstrap": "0.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "rupert-grunt": "0.0.6"
+  }
+}

@@ -1,0 +1,19 @@
+form(
+  name="helloForm"
+  ng-submit="sayhello(name)"
+  ng-init="hello = null; met = null; error = null;"
+)
+  .row
+    .col-sm-4.col-sm-offset-4
+      div(ng-hide="hello || met || error")
+        input.Name.form-control.input-lg(
+          placeholder="Name"
+          name="Name"
+          ng-model="name"
+        )
+      div(ng-show="hello")
+        | Pleased to meet you, {{ name }}!
+      div(ng-show="met")
+        | We've already met, {{ name }}! So nice to see you again!
+      div(ng-show="error")
+        | I'm sorry, I had trouble hearing you. Please try again later!
