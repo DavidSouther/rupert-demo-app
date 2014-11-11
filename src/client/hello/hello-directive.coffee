@@ -1,9 +1,9 @@
 angular.module('rupert-demo.hello', [
   'rupert-demo.hello.service'
-  'hello.template'
+  'hello.hello-template.template'
 ]).directive 'hello', (HelloSvc)->
   restrict: 'AE'
-  templateUrl: 'hello'
+  templateUrl: 'hello/hello-template'
   controller: ($scope)->
     $scope.sayhello = (name)->
       HelloSvc.sayhello(name)

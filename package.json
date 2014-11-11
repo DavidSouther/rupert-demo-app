@@ -19,8 +19,8 @@
   "homepage": "https://github.com/DavidSouther/rupert-demo-app",
   "dependencies": {
     "rupert": "^0.2.0",
-    "rupert-config-angular": "0.0.1",
-    "rupert-config-bootstrap": "0.0.1"
+    "rupert-config-angular": "^0.0.3",
+    "rupert-config-bootstrap": "^0.0.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
