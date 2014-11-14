@@ -1,4 +1,5 @@
 mappings = require '../mappings'
+Q = require 'q'
 
 steps = ->
   @Given /on the (?:site|page)/, =>
@@ -15,13 +16,10 @@ steps = ->
     .then => @protractor.waitForAngular()
 
   @Then /friendly greeting/, =>
-    @world.find(mappings.greeting).isDisplayed()
-    .then (isDisplayed)->
-      isDisplayed.should.equal true
+    @world.find(mappings.greeting).isDisplayed().then (_)-> _.should.equal true
 
   @Then /friendly already met you/, =>
-    @world.find(mappings.metyou).isDisplayed()
-    .then (isDisplayed)->
-      isDisplayed.should.equal true
+    @world.find(mappings.metyou).isDisplayed().then (_)-> _.should.equal true
 
-module.exports = require('rupert-grunt/steps')(steps, {protractor: yes})
+baseSteps = require('rupert-grunt/src/features/steps')
+module.exports = baseSteps(steps, {protractor: yes})

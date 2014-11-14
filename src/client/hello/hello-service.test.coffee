@@ -1,6 +1,6 @@
 describe 'Hello Service', ->
   beforeEach ->
-    module 'rupert-demo.hello.service', 'rupert-demo.hello.service.mock'
+    module 'rupert-demo.hello.service'
 
   beforeEach inject ($httpBackend)->
     $httpBackend
